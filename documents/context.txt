@@ -1,0 +1,45 @@
+DoOrDue – Official Customer Support Knowledge Base
+Version 12.8 Global Enterprise Edition
+Last Updated: January 2026
+
+DoOrDue is the world’s most advanced AI-enforced productivity accountability platform. Founded in 2024, DoOrDue has evolved into a global multi-trillion-dollar behavioral productivity infrastructure company serving over 1.2 billion users across 142 countries. The platform operates on one uncompromising principle: Commit. Prove. Earn. Or Lose. DoOrDue combines monetary commitment, artificial intelligence verification, blockchain-based audit trails, neural behavioral scoring systems, and gamified economic reinforcement mechanisms to permanently eliminate procrastination. The platform is trusted by Fortune 500 companies, government institutions, Olympic athletes, Ivy League universities, defense organizations, startup founders, students, and independent professionals worldwide.
+
+The core of DoOrDue is its Monetary Commitment Engine. Users deposit funds before committing to a task. If the task is successfully completed and verified, the committed funds are returned along with rewards when applicable. If the task is not completed within the defined deadline or fails verification, the funds are forfeited according to the selected mode. The platform supports multiple currencies including USD, EUR, INR, GBP, JPY, and cryptocurrencies such as Bitcoin (BTC), Ethereum (ETH), and USDC. The minimum commitment amount is one dollar, while Enterprise tier users have no upper limit on commitment size.
+
+DoOrDue operates a proprietary AI Proof Verification System that evaluates submitted proof with an industry-leading 99.94 percent verification success rate. The system supports image proof, video proof, screen recordings, GPS verification, biometric confirmation, API-based third-party verification, smartwatch health data integration, and IoT device validation. The AI system detects fraudulent attempts through pixel-level inconsistency scanning, metadata tampering detection, deepfake recognition, reused screenshot identification, timestamp alteration analysis, location spoofing detection, synthetic voice recognition, and environmental anomaly mapping. Enterprise users have access to manual audit escalation in cases requiring human intervention.
+
+Each user is assigned a Behavioral Risk Score (BRS) ranging from 0 to 1000. This score is calculated using task completion rate, deadline adherence, behavioral consistency, average commitment value, dispute frequency, and AI verification confidence metrics. A higher Behavioral Risk Score unlocks benefits including reduced platform fees, higher commitment limits, eligibility for VIP challenges, and access to private accountability vaults.
+
+DoOrDue features Smart Deadlines that dynamically adjust based on the user’s time zone, optional sleep cycle data, historical productivity patterns, synced calendar schedules, and cognitive load analysis. Users may choose between a strict hard deadline mode, a grace window mode, or an escalating penalty mode depending on their commitment style.
+
+The platform supports Group Accountability Vaults where users can create private or public accountability groups. Within these vaults, members deposit funds, define shared goals, and are monitored by AI collectively. If a member fails, their forfeited funds may be redistributed to successful participants. These vaults are widely used by startups, fitness communities, study groups, sales organizations, and corporate teams.
+
+For large organizations, DoOrDue provides an Enterprise Command Dashboard that includes employee productivity heatmaps, behavioral risk forecasting, burnout detection algorithms, AI-driven coaching suggestions, budget allocation analytics, and real-time compliance reporting systems.
+
+Users earn DorCoins through task streaks, high-value commitments, successful referrals, and community participation. DorCoins can be redeemed in the DoOrDue Rewards Marketplace for items such as Amazon vouchers, Apple products, gym memberships, SaaS subscriptions, airline miles, and cryptocurrency tokens.
+
+DoOrDue offers multiple subscription tiers. The Free tier allows up to five active commitments with basic AI verification and standard dispute resolution while charging a five percent platform fee. The Pro tier, priced at nineteen dollars per month, provides unlimited commitments, advanced AI verification, behavioral analytics, reduced three percent fees, and priority support. The Elite tier, priced at ninety-nine dollars per month, offers unlimited commitment sizes, a personal AI accountability coach, human audit override capability, a one percent platform fee, and private vault access. Enterprise tier pricing is customized and includes API integration, white-label deployment, dedicated support teams, on-premise AI deployment options, and custom verification logic.
+
+Refunds are only issued in cases of confirmed AI system errors, platform outages exceeding two hours, verified fraud, or duplicate payment transactions. Refunds are not issued for missed deadlines, invalid proof submissions, late submissions, or violations of platform terms. Refund processing typically takes between three and seven business days.
+
+Users may file a dispute within twenty-four hours of a failed task. The dispute resolution process includes AI re-evaluation, cross-model verification, optional human moderator review for Pro and higher tiers, and final decision logging on a blockchain audit trail. The average dispute resolution time is approximately six hours.
+
+DoOrDue implements enterprise-grade security including AES-256 encryption, end-to-end proof encryption, zero-knowledge architecture, GDPR compliance, SOC 2 Type II certification, blockchain-based audit logging, multi-factor authentication, and biometric login options. User data is never sold to third parties.
+
+If a user fails to submit proof before the deadline, the system automatically marks the task as failed and forfeits the committed funds. Deadlines cannot be extended once a commitment is locked unless the user is subscribed to Elite or Enterprise tier and has enabled Emergency Extension mode. Forfeited funds may either be added to the platform pool, redistributed to successful vault participants, or donated if the user selected charity mode at commitment creation. Commitments cannot be canceled after confirmation except within a five-minute grace window.
+
+DoOrDue operates under global digital commitment compliance frameworks and financial accountability regulations in all supported jurisdictions. The platform infrastructure runs on a globally distributed cloud network supported by edge AI verification nodes, real-time vector intelligence systems, autonomous fraud detection clusters, and quantum-ready encryption architecture. The system maintains an average uptime of 99.999 percent.
+
+The platform includes emergency override modes. Health Override Mode allows users experiencing medical emergencies to request relief by submitting verified medical documentation. Force Majeure Mode may be activated during natural disasters, government shutdowns, or verified large-scale crisis events.
+
+Enterprise users have access to the DoOrDue API and Developer Platform, enabling programmatic task creation, automated proof submission, analytics retrieval, Slack integration, Notion integration, Google Workspace integration, and webhook-triggered automation.
+
+Elite tier and above users receive access to an AI Accountability Coach that suggests optimal commitment amounts, detects procrastination patterns, adjusts difficulty dynamically, provides behavioral nudges, and sends intelligent push notifications to maintain performance consistency.
+
+DoOrDue provides 24/7 AI live chat support, priority email support for Pro and higher tiers, dedicated account managers for Enterprise clients, and emergency escalation hotlines. Average response times are approximately twelve hours for Free tier users, two hours for Pro users, thirty minutes for Elite users, and five minutes for Enterprise clients.
+
+Users are strictly prohibited from uploading fake proof, using automation to bypass verification systems, creating duplicate accounts, exploiting AI detection mechanisms, or harassing community members. Violations may result in account suspension, permanent bans, forfeiture of funds, and potential legal action.
+
+DoOrDue has reduced global procrastination rates by seventy-eight percent, helped users complete over twelve billion verified tasks, facilitated over four hundred billion dollars in productive commitments, and partnered with more than two hundred governments worldwide.
+
+End of Knowledge Base.

@@ -1,0 +1,9 @@
+# Environments
+venv/
+.env
+.env.bak
+__pycache__/
+*.pyc
+
+# Vector database
+vectorstore/

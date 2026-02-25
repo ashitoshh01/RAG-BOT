@@ -1,0 +1,5 @@
+DoOrDue is a platform for task management.
+Users can create tasks, projects, and collaborate.
+The free plan includes 100 Free Coins, but those cannot be withdrawn immediately to prevent bonus abuse.
+Users must engage with the platform to unlock full features.
+If you have issues, contact the AI customer support assistant.
