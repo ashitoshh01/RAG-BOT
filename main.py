@@ -34,6 +34,9 @@ async def chat_endpoint(request: ChatRequest):
         answer = ask_question(request.message)
         return ChatResponse(answer=answer)
     except Exception as e:
+        import traceback
+
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
 
 
