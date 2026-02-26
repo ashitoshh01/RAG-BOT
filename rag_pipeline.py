@@ -1,5 +1,6 @@
 import os
-from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_groq import ChatGroq
 from langchain_chroma import Chroma
 from langchain_core.prompts import PromptTemplate
 from langchain_classic.chains import create_retrieval_chain
@@ -21,8 +22,8 @@ def get_rag_chain():
     # Create the retriever
     retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 
-    # Initialize the LLM
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+    # Initialize the LLM with Groq
+    llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
     # Create the prompt template focusing on strictly answering from context
     prompt_template = """You are the official AI Customer Support Assistant for DoOrDue.

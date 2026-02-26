@@ -1,103 +1,124 @@
-# Expert RAG Chatbot
+# 🤖 RAG Chatbot — Expert AI Support Assistant
 
-This project is an AI-powered customer support assistant built using **FastAPI** for the backend, **LangChain** with **ChromaDB** for Retrieval-Augmented Generation (RAG), and a simple **HTML/CSS/JS** frontend.
+An AI-powered customer support chatbot built with **FastAPI**, **LangChain**, **ChromaDB**, and a clean HTML/CSS/JS frontend.
 
-The application serves both the API endpoints and the frontend static files on the same server for simplicity.
+It uses **Retrieval-Augmented Generation (RAG)** to answer questions strictly from your own documents — no hallucinations.
 
-## Project Structure
+---
+
+## 🤖 AI Stack
+
+| Component     | Provider / Model                              |
+|---------------|-----------------------------------------------|
+| **LLM**       | [Groq](https://groq.com) → `llama-3.3-70b-versatile` |
+| **Embeddings**| Google Generative AI → `gemini-embedding-001` |
+| **Vector DB** | ChromaDB (local, persisted to `vectorstore/`) |
+| **Framework** | LangChain                                     |
+| **Backend**   | FastAPI + Uvicorn                             |
+
+---
+
+## 📁 Project Structure
 
 ```text
 RAG/
-├── main.py                # FastAPI application and routes
-├── rag_pipeline.py        # LangChain setup and querying logic
-├── ingest_data.py         # Script to ingest new PDF/TXT into ChromaDB
-├── vectorstore/           # Directory containing the ChromaDB embeddings
-├── index.html             # User interface
-├── script.js              # Logic to handle user chat and API communication
-├── style.css              # Styling for the chatbot UI
-├── .env                   # Environment variables
-└── requirements.txt       # Python dependencies
+├── main.py            # FastAPI app — API routes & static file serving
+├── rag_pipeline.py    # RAG logic: embeddings, retrieval, Groq LLM
+├── ingest_data.py     # Script to ingest PDF/TXT into ChromaDB
+├── index.html         # Chat UI (served at GET /)
+├── script.js          # Frontend chat logic
+├── style.css          # Chat UI styles
+├── favicon.png        # Browser tab icon
+├── vectorstore/       # ChromaDB persisted vector store (auto-generated)
+├── documents/         # Place your source documents here
+├── .env               # API keys (never commit this!)
+└── requirements.txt   # Python dependencies
 ```
 
-## Prerequisites
+> 📌 See [SITEMAP.md](./SITEMAP.md) for a full detailed breakdown of every file.
 
-- Python 3.8+
-- An OpenAI API key
+---
 
-## Setup Instructions
+## ⚙️ Setup Instructions
 
-### 1. Clone or Navigate to the Project Directory
+### 1. Clone / Navigate to the Project
 
 ```bash
 cd RAG
 ```
 
-### 2. Create and Activate a Virtual Environment (Recommended)
+### 2. Create & Activate a Virtual Environment
 
-**On macOS/Linux:**
 ```bash
+# macOS / Linux
 python -m venv venv
 source venv/bin/activate
-```
 
-**On Windows:**
-```bash
+# Windows
 python -m venv venv
 venv\Scripts\activate
 ```
 
 ### 3. Install Dependencies
 
-Install the required Python packages using `pip`:
-
 ```bash
 pip install -r requirements.txt
+pip install langchain-groq langchain-google-genai langchain-chroma
 ```
 
-### 4. Create the Environment File
+### 4. Set Up Environment Variables
 
-Create a `.env` file in the root directory (`RAG/`) if it doesn't already exist, and add your **OpenAI API key**. 
-*(Note: Your current `.env` file seems to have a Google-style API key starting with `AIzaSy`. It must be a valid OpenAI API key starting with `sk-`)*
+Create a `.env` file in the root directory:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
+GOOGLE_API_KEY=your_google_api_key_here
 ```
 
-### 5. Add Your Vector Store Data
+- Get your **Groq API key**: [https://console.groq.com](https://console.groq.com)
+- Get your **Google API key**: [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
 
-We have created an ingestion script (`ingest_data.py`) for you, which will take a PDF or Text file, split it into chunks, and store it in ChromaDB automatically.
+### 5. Ingest Your Documents
 
-Make sure your virtual environment is activated, then run:
+Place your PDF or TXT files in the `documents/` folder, then run:
 
 ```bash
-# To ingest a PDF file
+# Ingest a PDF
 python ingest_data.py path/to/your/document.pdf
 
-# Or to ingest a Text file
+# Ingest a TXT
 python ingest_data.py path/to/your/document.txt
 ```
 
-This will embed the file's contents and create the `vectorstore` directory for you.
+This creates the `vectorstore/` directory with the embeddings.
 
-## Running the Application
+---
 
-To start the server, use `uvicorn`. The application auto-serves both your API and frontend files automatically.
-
-**Run from the root directory:**
+## 🚀 Running the Application
 
 ```bash
 uvicorn main:app --reload
 ```
 
-## Accessing the Chatbot
+> ⚠️ Make sure your **venv is activated** before running.
 
-Once the server is running, open your web browser and navigate to:
+Then open your browser at:
 
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+**[http://127.0.0.1:8000](http://127.0.0.1:8000)**
 
-You can now start interacting with the Expert Support Assistant through the chat interface.
+---
 
-## Notes
+## 🔌 API Reference
 
-- The system uses the `gpt-4o-mini` model with zero temperature to provide accurate answers strictly restricted to the contextual data provided in the Chroma vector store.
-- If the required context is missing, the AI is programmed to fallback gracefully without hallucinating.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET`  | `/` | Serves the chat UI |
+| `POST` | `/chat` | Send `{ "message": "..." }`, receive `{ "answer": "..." }` |
+
+---
+
+## 📝 Notes
+
+- The LLM answers **only** from the context stored in ChromaDB — it will not hallucinate or use outside knowledge.
+- If the answer isn't in the documents, the bot gracefully says it doesn't have that information.
+- Temperature is set to `0` for deterministic, factual responses.
